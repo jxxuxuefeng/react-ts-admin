@@ -12,14 +12,16 @@ moment.locale('zh-cn');
 import './global.less';
 import styles from './App.less';
 import { routerData } from '@/router';
-import Nav from '@/layouts/Nav';
 import store from '@/store/store';
+import Nav from '@/layouts/Nav';
+import Sidebar from '@/layouts/Sidebar'
 
 const App = () => {
   return (
     <ConfigProvider locale={zhCN}>
       <Provider store={store}>
         <Router>
+          <Sidebar />
           <Nav />
           <Suspense
             fallback={
